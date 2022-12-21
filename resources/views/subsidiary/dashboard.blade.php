@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.subsidiary')
 
 @section('content')
     <div class="container mx-auto py-5">
-        <h1 class="">Dashboard do Lojista</h1>
+        <h2 class="">Dashboard - Subsidiary</h2>
     </div>
 @endsection

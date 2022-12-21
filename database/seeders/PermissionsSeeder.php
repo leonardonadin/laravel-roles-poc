@@ -22,172 +22,139 @@ class PermissionsSeeder extends Seeder
 
         $create_users = Permission::create([
             'name' => 'create users',
-            'display_name' => 'Criar Usuários',
-            'description' => 'Criar Usuários',
         ]);
         $role_admin->givePermissionTo($create_users);
-        $role_admin->givePermissionTo($create_users);
+        $role_manager->givePermissionTo($create_users);
 
-        $editUsers = Permission::create([
-            'name' => 'edit users',
-            'display_name' => 'Editar Usuários',
-            'description' => 'Editar Usuários',
+        $editAllUsers = Permission::create([
+            'name' => 'edit all users',
         ]);
-        $role_admin->givePermissionTo($editUsers);
-        $role_manager->givePermissionTo($editUsers);
+        $role_admin->givePermissionTo($editAllUsers);
 
-        $delete_users = Permission::create([
-            'name' => 'delete users',
-            'display_name' => 'Deletar Usuários',
-            'description' => 'Deletar Usuários',
+        $editOwnUsers = Permission::create([
+            'name' => 'edit own users',
         ]);
-        $role_admin->givePermissionTo($delete_users);
-        $role_manager->givePermissionTo($delete_users);
+        $role_admin->givePermissionTo($editOwnUsers);
+        $role_manager->givePermissionTo($editOwnUsers);
 
-        $create_roles = Permission::create([
-            'name' => 'create roles',
-            'display_name' => 'Criar Funções',
-            'description' => 'Criar Funções',
+        $deleteAllUsers = Permission::create([
+            'name' => 'delete all users',
         ]);
-        $role_admin->givePermissionTo($create_roles);
+        $role_admin->givePermissionTo($deleteAllUsers);
 
-        $edit_roles =Permission::create([
-            'name' => 'edit roles',
-            'display_name' => 'Editar Funções',
-            'description' => 'Editar Funções',
+        $deleteOwnUsers = Permission::create([
+            'name' => 'delete own users',
         ]);
-        $role_admin->givePermissionTo($edit_roles);
+        $role_admin->givePermissionTo($deleteOwnUsers);
+        $role_manager->givePermissionTo($deleteOwnUsers);
 
-        $delete_roles = Permission::create([
-            'name' => 'delete roles',
-            'display_name' => 'Deletar Funções',
-            'description' => 'Deletar Funções',
+        $createTeams = Permission::create([
+            'name' => 'create teams',
         ]);
-        $role_admin->givePermissionTo($delete_roles);
+        $role_admin->givePermissionTo($createTeams);
 
-        $create_permissions = Permission::create([
-            'name' => 'create permissions',
-            'display_name' => 'Criar Permissões',
-            'description' => 'Criar Permissões',
+        $editAllTeams = Permission::create([
+            'name' => 'edit all teams',
         ]);
-        $role_admin->givePermissionTo($create_permissions);
+        $role_admin->givePermissionTo($editAllTeams);
 
-        $edit_permissions = Permission::create([
-            'name' => 'edit permissions',
-            'display_name' => 'Editar Permissões',
-            'description' => 'Editar Permissões',
+        $editOwnTeams = Permission::create([
+            'name' => 'edit own teams',
         ]);
-        $role_admin->givePermissionTo($edit_permissions);
+        $role_admin->givePermissionTo($editOwnTeams);
+        $role_manager->givePermissionTo($editOwnTeams);
 
-        $delete_permissions = Permission::create([
-            'name' => 'delete permissions',
-            'display_name' => 'Deletar Permissões',
-            'description' => 'Deletar Permissões',
+        $deleteAllTeams = Permission::create([
+            'name' => 'delete all teams',
         ]);
-        $role_admin->givePermissionTo($delete_permissions);
+        $role_admin->givePermissionTo($deleteAllTeams);
 
-        $create_products = Permission::create([
+        $createProducts = Permission::create([
             'name' => 'create products',
-            'display_name' => 'Criar Produtos',
-            'description' => 'Criar Produtos',
         ]);
-        $role_admin->givePermissionTo($create_products);
-        $role_manager->givePermissionTo($create_products);
-        $role_seller->givePermissionTo($create_products);
+        $role_admin->givePermissionTo($createProducts);
+        $role_manager->givePermissionTo($createProducts);
 
-        $edit_products = Permission::create([
-            'name' => 'edit products',
-            'display_name' => 'Editar Produtos',
-            'description' => 'Editar Produtos',
+        $editAllProducts = Permission::create([
+            'name' => 'edit all products',
         ]);
-        $role_admin->givePermissionTo($edit_products);
-        $role_manager->givePermissionTo($edit_products);
-        $role_seller->givePermissionTo($edit_products);
+        $role_admin->givePermissionTo($editAllProducts);
 
-        $delete_products = Permission::create([
-            'name' => 'delete products',
-            'display_name' => 'Deletar Produtos',
-            'description' => 'Deletar Produtos',
+        $editOwnProducts = Permission::create([
+            'name' => 'edit own products',
         ]);
-        $role_admin->givePermissionTo($delete_products);
-        $role_manager->givePermissionTo($delete_products);
-        $role_seller->givePermissionTo($delete_products);
+        $role_admin->givePermissionTo($editOwnProducts);
+        $role_manager->givePermissionTo($editOwnProducts);
 
-        $create_categories = Permission::create([
-            'name' => 'create categories',
-            'display_name' => 'Criar Categorias',
-            'description' => 'Criar Categorias',
+        $deleteAllProducts = Permission::create([
+            'name' => 'delete all products',
         ]);
-        $role_admin->givePermissionTo($create_categories);
-        $role_manager->givePermissionTo($create_categories);
+        $role_admin->givePermissionTo($deleteAllProducts);
 
-        $edit_categories = Permission::create([
-            'name' => 'edit categories',
-            'display_name' => 'Editar Categorias',
-            'description' => 'Editar Categorias',
+        $deleteOwnProducts = Permission::create([
+            'name' => 'delete own products',
         ]);
-        $role_admin->givePermissionTo($edit_categories);
-        $role_manager->givePermissionTo($edit_categories);
+        $role_admin->givePermissionTo($deleteOwnProducts);
+        $role_manager->givePermissionTo($deleteOwnProducts);
 
-        $delete_categories = Permission::create([
-            'name' => 'delete categories',
-            'display_name' => 'Deletar Categorias',
-            'description' => 'Deletar Categorias',
+        $createProductPrices = Permission::create([
+            'name' => 'create product prices',
         ]);
-        $role_admin->givePermissionTo($delete_categories);
-        $role_manager->givePermissionTo($delete_categories);
+        $role_admin->givePermissionTo($createProductPrices);
+        $role_manager->givePermissionTo($createProductPrices);
+        $role_seller->givePermissionTo($createProductPrices);
 
-        $create_orders = Permission::create([
-            'name' => 'create orders',
-            'display_name' => 'Criar Pedidos',
-            'description' => 'Criar Pedidos',
+        $editAllProductPrices = Permission::create([
+            'name' => 'edit all product prices',
         ]);
-        $role_admin->givePermissionTo($create_orders);
-        $role_manager->givePermissionTo($create_orders);
-        $role_seller->givePermissionTo($create_orders);
-        $role_client->givePermissionTo($create_orders);
+        $role_admin->givePermissionTo($editAllProductPrices);
 
-        $edit_orders = Permission::create([
-            'name' => 'edit orders',
-            'display_name' => 'Editar Pedidos',
-            'description' => 'Editar Pedidos',
+        $editOwnProductPrices = Permission::create([
+            'name' => 'edit own product prices',
         ]);
-        $role_admin->givePermissionTo($edit_orders);
-        $role_manager->givePermissionTo($edit_orders);
-        $role_seller->givePermissionTo($edit_orders);
-        $role_client->givePermissionTo($edit_orders);
+        $role_admin->givePermissionTo($editOwnProductPrices);
+        $role_manager->givePermissionTo($editOwnProductPrices);
+        $role_seller->givePermissionTo($editOwnProductPrices);
 
-        $delete_orders = Permission::create([
-            'name' => 'delete orders',
-            'display_name' => 'Deletar Pedidos',
-            'description' => 'Deletar Pedidos',
+        $deleteAllProductPrices = Permission::create([
+            'name' => 'delete all product prices',
         ]);
-        $role_admin->givePermissionTo($delete_orders);
-        $role_manager->givePermissionTo($delete_orders);
-        $role_seller->givePermissionTo($delete_orders);
+        $role_admin->givePermissionTo($deleteAllProductPrices);
 
-        $create_coupons = Permission::create([
-            'name' => 'create coupons',
-            'display_name' => 'Criar Cupons',
-            'description' => 'Criar Cupons',
+        $deleteOwnProductPrices = Permission::create([
+            'name' => 'delete own product prices',
         ]);
-        $role_admin->givePermissionTo($create_coupons);
-        $role_manager->givePermissionTo($create_coupons);
+        $role_admin->givePermissionTo($deleteOwnProductPrices);
+        $role_manager->givePermissionTo($deleteOwnProductPrices);
 
-        $edit_coupons = Permission::create([
-            'name' => 'edit coupons',
-            'display_name' => 'Editar Cupons',
-            'description' => 'Editar Cupons',
+        $createProductStocks = Permission::create([
+            'name' => 'create product stocks',
         ]);
-        $role_admin->givePermissionTo($edit_coupons);
-        $role_manager->givePermissionTo($edit_coupons);
+        $role_admin->givePermissionTo($createProductStocks);
+        $role_manager->givePermissionTo($createProductStocks);
+        $role_seller->givePermissionTo($createProductStocks);
 
-        $delete_coupons = Permission::create([
-            'name' => 'delete coupons',
-            'display_name' => 'Deletar Cupons',
-            'description' => 'Deletar Cupons',
+        $editAllProductStocks = Permission::create([
+            'name' => 'edit all product stocks',
         ]);
-        $role_admin->givePermissionTo($delete_coupons);
-        $role_manager->givePermissionTo($delete_coupons);
+        $role_admin->givePermissionTo($editAllProductStocks);
+
+        $editOwnProductStocks = Permission::create([
+            'name' => 'edit own product stocks',
+        ]);
+        $role_admin->givePermissionTo($editOwnProductStocks);
+        $role_manager->givePermissionTo($editOwnProductStocks);
+        $role_seller->givePermissionTo($editOwnProductStocks);
+
+        $deleteAllProductStocks = Permission::create([
+            'name' => 'delete all product stocks',
+        ]);
+        $role_admin->givePermissionTo($deleteAllProductStocks);
+
+        $deleteOwnProductStocks = Permission::create([
+            'name' => 'delete own product stocks',
+        ]);
+        $role_admin->givePermissionTo($deleteOwnProductStocks);
+        $role_manager->givePermissionTo($deleteOwnProductStocks);
     }
 }

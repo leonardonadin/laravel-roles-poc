@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Store\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class LoginController extends Controller {
 
     public function index() {
-        return view('store.auth.login');
+        return view('admin.auth.login');
     }
 
     public function login(Request $request) {
@@ -17,8 +17,12 @@ class LoginController extends Controller {
 
         $user = User::where('email', $credentials['email'])->first();
 
+        if (!$user || (!$user->hasRole('admin') && !$user->hasRole('super-admin'))) {
+            return redirect()->back()->withInput()->withErrors(['email' => 'Access denied']);
+        }
+
         if (auth()->attempt($credentials)) {
-            return redirect()->route('home');
+            return redirect()->route('admin.dashboard');
         }
 
         return redirect()->back()->withInput()->withErrors(['email' => 'Invalid credentials']);
@@ -28,6 +32,6 @@ class LoginController extends Controller {
     {
         auth()->logout();
 
-        return redirect()->route('login');
+        return redirect()->route('admin.login');
     }
 }

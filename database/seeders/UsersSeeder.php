@@ -15,28 +15,28 @@ class UsersSeeder extends Seeder
     {
         $admin = \App\Models\User::create([
             'name' => 'Admin',
-            'email' => 'admin@teste.com',
+            'email' => 'admin@test.com',
             'password' => bcrypt('123456'),
         ]);
         $admin->assignRole('admin');
 
         $manager = \App\Models\User::create([
             'name' => 'Manager',
-            'email' => 'manager@teste.com',
+            'email' => 'manager@test.com',
             'password' => bcrypt('123456'),
         ]);
         $manager->assignRole('manager');
 
         $seller = \App\Models\User::create([
             'name' => 'Seller',
-            'email' => 'seller@teste.com',
+            'email' => 'seller@test.com',
             'password' => bcrypt('123456'),
         ]);
         $seller->assignRole('seller');
 
         $client = \App\Models\User::create([
             'name' => 'Client',
-            'email' => 'client@teste.com',
+            'email' => 'client@test.com',
             'password' => bcrypt('123456'),
         ]);
         $client->assignRole('client');
